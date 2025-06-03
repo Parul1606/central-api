@@ -17,13 +17,14 @@ public class OrgController {
     @Autowired
     OrgService orgService;
 
-
     @PostMapping("/registration")
     public ResponseEntity createOrganization(@RequestBody OrgDetailDto orgDetailDto){
-        // we will get organization details as requestbody
-        // but question is that organization details should
-        // be same as organization model designed in db api.
+        // We will get organization details as request body
+        // But question is that organization details should be same as organization
+        // model designed in db api.
         Object response = orgService.createOrganization(orgDetailDto);
         return new ResponseEntity(response, HttpStatus.CREATED);
+
     }
 }
+

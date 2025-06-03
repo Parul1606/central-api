@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Service
 public class OrgService {
@@ -22,10 +23,10 @@ public class OrgService {
     NotificationAPIConnector notificationAPIConnector;
 
     @Autowired
-    RoleService roleService;
+    MappingUtil mapper;
 
     @Autowired
-    MappingUtil mapper;
+    RoleService roleService;
 
     @Autowired
     EmployeeService employeeService;
